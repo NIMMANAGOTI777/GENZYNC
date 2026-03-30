@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenZync Community</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .opacity-0-init {
+            opacity: 0;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans selection:bg-gray-200 overflow-x-hidden">
+
+    <div class="min-h-screen">
+        <!-- Navigation -->
+        <nav class="w-full top-0 bg-white/80 backdrop-blur-md z-50 py-4 sticky border-b border-gray-100 animate-fade-in">
+            <div class="max-w-[1400px] mx-auto px-6 flex items-center justify-between">
+                <div class="flex items-center gap-12">
+                    <div class="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer">
+                        <img 
+                            src="https://res.cloudinary.com/do4nuj2kh/image/upload/v1774893726/GenZync.logo_1_xkccjh.png" 
+                            alt="GenZync Logo" 
+                            class="h-24 md:h-32 w-auto object-contain drop-shadow-sm" 
+                        />
+                        <span class="text-3xl font-bold tracking-tight text-gray-900 hidden sm:block">GenZync</span>
+                    </div>
+                    
+                    <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-gray-500">
+                        <a href="#about" class="hover:text-black transition-colors">About Us</a>
+                        <a href="#learn" class="hover:text-black transition-colors">Curriculum</a>
+                        <a href="#founder" class="hover:text-black transition-colors">Founder</a>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-5 text-sm font-semibold">
+                    <a href="#login" class="hover:text-gray-900 text-gray-500 transition-colors px-4">Login</a>
+                    <button class="bg-black hover:bg-gray-800 hover:-translate-y-0.5 text-white px-7 py-3 rounded-full transition-all duration-300 shadow-lg shadow-gray-200">
+                        Join for free
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="max-w-[1400px] mx-auto px-6 pt-24 pb-32">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="max-w-2xl">
+                    <div class="flex items-center gap-3 mb-8 text-gray-600 font-semibold opacity-0-init animate-fade-in-up">
+                        <span class="bg-gray-100 px-4 py-1.5 rounded-full text-sm tracking-wide">Backed by industry leaders</span>
+                    </div>
+                    
+                    <h1 class="text-[3.5rem] leading-[1.1] md:text-[5rem] font-semibold tracking-tight mb-6 opacity-0-init animate-fade-in-up delay-100">
+                        The modern community for tech students
+                    </h1>
+                    
+                    <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-lg opacity-0-init animate-fade-in-up delay-200">
+                        Designed to bridge the gap between academic curricula and industry demands. Join us to upskill, build a strong brand, and level up.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center gap-4 mb-10 opacity-0-init animate-fade-in-up delay-300">
+                        <button class="w-full sm:w-auto bg-black text-white px-9 py-4 rounded-full font-semibold hover:bg-gray-800 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-lg">
+                            Get started
+                        </button>
+                        <button class="w-full sm:w-auto border-2 border-gray-200 text-black px-9 py-4 rounded-full font-semibold hover:border-black hover:bg-gray-50 transition-all duration-300 text-lg">
+                            Explore programs
+                        </button>
+                    </div>
+
+                    <div class="flex items-center gap-3 text-sm text-gray-500 font-semibold opacity-0-init animate-fade-in-up delay-400">
+                        <div class="flex text-yellow-400">
+                            <!-- SVG Star Icons -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 fill-current"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 fill-current"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 fill-current"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 fill-current"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 fill-current"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <span class="text-gray-900">1020+ Members</span>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden bg-[#F3F0EB] p-8 md:p-14 flex items-center justify-center opacity-0-init animate-fade-in-up delay-300 group">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gray-100 to-transparent opacity-50"></div>
+                    <img 
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1600" 
+                        alt="Workspace setup" 
+                        class="relative z-10 rounded-xl shadow-2xl w-full object-cover aspect-video transform group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- What is GenZync? -->
+        <section id="about" class="py-32 bg-gray-50 border-y border-gray-100 relative overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 relative z-10">
+                <div class="grid md:grid-cols-2 gap-20 items-center">
+                    <div class="opacity-0-init animate-fade-in-up">
+                        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-8 text-gray-900">What is GenZync?</h2>
+                        <p class="text-gray-600 text-xl leading-relaxed mb-10">
+                            GenZync is a collaborative community designed to help students acquire industry-relevant skills, gain practical experience, and build meaningful professional networks outside the outdated traditional college curriculum.
+                        </p>
+                        <ul class="space-y-6">
+                            <li class="flex items-center gap-5 text-gray-900 font-semibold text-lg hover:translate-x-2 transition-transform duration-300">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 shadow-sm">✓</div>
+                                Learn Industry-Relevant Technologies
+                            </li>
+                            <li class="flex items-center gap-5 text-gray-900 font-semibold text-lg hover:translate-x-2 transition-transform duration-300">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 shadow-sm">✓</div>
+                                Hands-on Practical Experience
+                            </li>
+                            <li class="flex items-center gap-5 text-gray-900 font-semibold text-lg hover:translate-x-2 transition-transform duration-300">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 shadow-sm">✓</div>
+                                Build Professional Networks
+                            </li>
+                            <li class="flex items-center gap-5 text-gray-900 font-semibold text-lg hover:translate-x-2 transition-transform duration-300">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 shadow-sm">✓</div>
+                                Collaborative Growth Environment
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl opacity-0-init animate-fade-in-up delay-200 group">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                        <img 
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80" 
+                            alt="Community Collaboration"
+                            class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What will we learn? -->
+        <section id="learn" class="py-32 bg-white">
+            <div class="max-w-[1400px] mx-auto px-6">
+                <div class="mb-24 max-w-3xl opacity-0-init animate-fade-in-up">
+                    <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-6">What will you learn?</h2>
+                    <p class="text-gray-500 text-2xl leading-relaxed">
+                        Stay ahead of the outdated curriculum with real-world skills that modern companies are actually looking for.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Card 1 -->
+                    <div class="bg-white border-2 border-gray-100 rounded-[2rem] p-12 hover:border-black hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group opacity-0-init animate-fade-in-up delay-100 cursor-pointer">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-black group-hover:text-white transition-colors duration-500">
+                            <!-- Bot SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><rect width="18" height="10" x="3" y="11" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" x2="8" y1="16" y2="16"/><line x1="16" x2="16" y1="16" y2="16"/></svg>
+                        </div>
+                        <h3 class="text-3xl font-semibold mb-5 tracking-tight">Gen AI Tools</h3>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            Leverage advanced AI tools such as ChatGPT, Midjourney, and Claude to enhance productivity, creativity, and problem-solving skills.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white border-2 border-gray-100 rounded-[2rem] p-12 hover:border-black hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group opacity-0-init animate-fade-in-up delay-200 cursor-pointer">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-black group-hover:text-white transition-colors duration-500">
+                            <!-- PenTool SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                        </div>
+                        <h3 class="text-3xl font-semibold mb-5 tracking-tight">Content Creation</h3>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            Develop high-impact content strategies, optimize your digital presence, and build a strong personal brand that stands out.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white border-2 border-gray-100 rounded-[2rem] p-12 hover:border-black hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group opacity-0-init animate-fade-in-up delay-300 cursor-pointer">
+                        <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-black group-hover:text-white transition-colors duration-500">
+                            <!-- TrendingUp SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                        </div>
+                        <h3 class="text-3xl font-semibold mb-5 tracking-tight">Personal Growth</h3>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            Strengthen communication, technical expertise, and adaptability to stay competitive in a fast-paced, dynamic environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder Section -->
+        <section id="founder" class="py-32 bg-gray-50 border-t border-gray-100">
+            <div class="max-w-[1400px] mx-auto px-6">
+                <div class="flex flex-col items-center text-center max-w-4xl mx-auto opacity-0-init animate-fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-16">Meet the Founder</h2>
+                    
+                    <div class="bg-white p-12 md:p-16 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-gray-200/50 w-full hover:shadow-2xl transition-shadow duration-500">
+                        <div class="w-40 h-40 rounded-full overflow-hidden mx-auto mb-8 bg-gray-100 border-8 border-white shadow-xl hover:scale-105 transition-transform duration-500">
+                            <img 
+                                src="https://res.cloudinary.com/do4nuj2kh/image/upload/v1774894359/WhatsApp_Image_2026-03-30_at_11.41.45_PM_qs526s.jpg" 
+                                alt="Tagarampudi Issaku" 
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                        
+                        <h3 class="text-4xl font-semibold tracking-tight mb-3">Tagarampudi Issaku</h3>
+                        <p class="text-gray-500 font-semibold mb-10 text-lg">He/Him • Founder of GenZync</p>
+                        
+                        <div class="flex flex-wrap justify-center gap-3 mb-10">
+                            <span class="bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-800 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors cursor-default">🎓 B.Tech Student</span>
+                            <span class="bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-800 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors cursor-default">💻 Frontend Developer</span>
+                            <span class="bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-800 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors cursor-default">🌏 Social Networking</span>
+                            <span class="bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-800 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors cursor-default">👨‍💻 Technical Intern</span>
+                            <span class="bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-800 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors cursor-default">🎨 Content Creator</span>
+                            <span class="bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-800 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors cursor-default">🚀 Event Organiser</span>
+                        </div>
+                        
+                        <p class="text-gray-600 text-xl leading-relaxed mb-12 max-w-2xl mx-auto">
+                            Building Tech-Driven Impact. Student Volunteer & Team Lead passionate about bridging the gap between academic learning and industry skills.
+                        </p>
+                        
+                        <a 
+                            href="https://www.linkedin.com/in/tagarampudi-issaku-7017a3374" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-3 bg-[#0A66C2] text-white px-10 py-4 rounded-full font-semibold hover:bg-[#004182] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-lg"
+                        >
+                            <!-- Linkedin SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-40 bg-black text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,transparent_50%)]"></div>
+            <div class="max-w-[1400px] mx-auto px-6 text-center relative z-10 opacity-0-init animate-fade-in-up">
+                <h2 class="text-5xl md:text-7xl font-semibold tracking-tight mb-10">Ready to sync up?</h2>
+                <p class="text-2xl text-gray-400 mb-14 max-w-3xl mx-auto leading-relaxed">
+                    Join a forward-thinking community focused on innovation, practical learning, and career growth. Take the next step in your journey today.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <button class="bg-white text-black px-12 py-5 rounded-full font-bold hover:bg-gray-200 hover:scale-105 transition-all duration-300 text-xl shadow-[0_0_40px_rgba(255,255,255,0.3)]">
+                        Join GenZync Today
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 border-t border-gray-100 bg-white">
+            <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-gray-500 text-sm font-medium">
+                <div class="flex items-center gap-3 mb-4 md:mb-0">
+                    <img 
+                        src="https://res.cloudinary.com/do4nuj2kh/image/upload/v1774893726/GenZync.logo_1_xkccjh.png" 
+                        alt="GenZync Logo" 
+                        class="h-8 w-auto grayscale opacity-70" 
+                    />
+                    <span class="font-semibold text-gray-900 text-lg">GenZync</span>
+                </div>
+                <p class="text-base">© 2026 GenZync Community. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

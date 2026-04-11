@@ -280,7 +280,7 @@
                         </p>
                     </div>
                     
-                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar cursor-grab active:cursor-grabbing">
+                    <div id="carousel-container" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar cursor-grab active:cursor-grabbing">
                         <!-- Day 1 -->
                         <div class="min-w-[85vw] md:min-w-[380px] lg:min-w-[420px] snap-center bg-white border border-gray-200 rounded-[2rem] overflow-hidden hover:shadow-xl hover:border-brand-yellow transition-all duration-300 flex flex-col shrink-0">
                             <img src="https://res.cloudinary.com/do4nuj2kh/image/upload/v1775803263/Screenshot_2026-04-10_120909_oaogx6.png" alt="Day 1" class="w-full h-56 object-cover border-b border-gray-100">
@@ -318,6 +318,16 @@
                                 <div class="bg-brand-dark text-brand-yellow text-xs font-bold px-3 py-1 rounded-full self-start mb-4">Day 4</div>
                                 <h4 class="text-2xl font-bold text-brand-dark mb-2">Business Prompt Basics</h4>
                                 <p class="text-gray-600 text-sm leading-relaxed">What makes a good prompt + client-based prompting</p>
+                            </div>
+                        </div>
+
+                        <!-- Day 5 -->
+                        <div class="min-w-[85vw] md:min-w-[380px] lg:min-w-[420px] snap-center bg-brand-gray border border-gray-200 rounded-[2rem] overflow-hidden hover:shadow-xl hover:border-brand-yellow transition-all duration-300 flex flex-col shrink-0">
+                            <img src="https://res.cloudinary.com/do4nuj2kh/image/upload/v1775880440/Screenshot_2026-04-11_093251_qfb5g8.png" alt="Day 5" class="w-full h-56 object-cover border-b border-gray-100">
+                            <div class="p-8 flex-1 flex flex-col bg-white">
+                                <div class="bg-brand-dark text-brand-yellow text-xs font-bold px-3 py-1 rounded-full self-start mb-4">Day 5</div>
+                                <h4 class="text-2xl font-bold text-brand-dark mb-2">Cybersecurity</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">Introduction to cybersecurity + staying safe online</p>
                             </div>
                         </div>
                     </div>
@@ -556,6 +566,36 @@
             document.querySelectorAll('.scroll-hidden').forEach(el => {
                 observer.observe(el);
             });
+
+            // Carousel Auto-Scroll
+            const carousel = document.getElementById('carousel-container');
+            if (carousel) {
+                let autoScrollTimer;
+                
+                const startScroll = () => {
+                    autoScrollTimer = setInterval(() => {
+                        const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+                        // Reset to start smoothly if at end
+                        if (carousel.scrollLeft >= maxScrollLeft - 10) {
+                            carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        } else {
+                            // Scroll one card width + gap (approx)
+                            const cardWidth = carousel.firstElementChild.offsetWidth + 24;
+                            carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                        }
+                    }, 3000); // 3 seconds
+                };
+
+                const stopScroll = () => clearInterval(autoScrollTimer);
+
+                // Pause auto scroll on hover/interaction
+                carousel.addEventListener('mouseenter', stopScroll);
+                carousel.addEventListener('mouseleave', startScroll);
+                carousel.addEventListener('touchstart', stopScroll);
+                carousel.addEventListener('touchend', startScroll);
+
+                startScroll();
+            }
         });
     </script>
 </body>
